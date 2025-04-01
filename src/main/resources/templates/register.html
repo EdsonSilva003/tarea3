@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a85b6, #bac8e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    background-color: white;
+    color: #333;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #7a9cd6;
+    box-shadow: 0 0 5px rgba(122, 156, 214, 0.5);
+}
+
+button {
+    padding: 12px;
+    background-color: #7a9cd6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5f81b2;
+}
+
+a {
+    color: #7a9cd6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registro</h1>
+        <form action="/register" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        <a href="/login">¿Ya tienes cuenta? Inicia Sesión</a>
+    </div>
+</body>
+</html>
