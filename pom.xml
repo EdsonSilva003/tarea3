@@ -12,7 +12,7 @@
 	<artifactId>Recomendaciones</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Recomendaciones</name>
-	<description>Sistema de búsqueda y recomendación de libros y peliculas</description>
+	<description>Sistema de búsqueda y recomendación de articulos</description>
 	<url/>
 	<licenses>
 		<license/>

@@ -1,11 +1,11 @@
--- Eliminar la base de datos "practica2" si ya existe
-DROP DATABASE IF EXISTS practica2;
+-- Eliminar la base de datos "" si ya existe
+DROP DATABASE IF EXISTS proyecto;
 
--- Crear la base de datos "practica2" con codificación UTF-8
-CREATE DATABASE practica2 CHARACTER SET utf8 COLLATE utf8_general_ci;
+-- Crear la base de datos "proyecto" con codificación UTF-8
+CREATE DATABASE proyecto CHARACTER SET utf8 COLLATE utf8_general_ci;
 
--- Usar la base de datos "practica2"
-USE practica2;
+-- Usar la base de datos "proyecto"
+USE proyecto;
 
 -- Crear la tabla de usuarios
 CREATE TABLE usuarios (
@@ -30,10 +30,6 @@ CREATE TABLE usuario_roles (
     FOREIGN KEY (rol_id) REFERENCES roles(id)
 );
 
--- Insertar roles en la tabla roles
-INSERT INTO roles (nombre) VALUES ('ROLE_ADMIN'), ('ROLE_USER');
-INSERT INTO `usuarios`(`id`, `nombre`, `email`, `password`, `imagen`) VALUES ('1','edson','edson@gmailc.com','edson','');
-INSERT INTO `usuario_roles`(`usuario_id`, `rol_id`) VALUES ('1','1');
 -- Eliminar el usuario 'admin' si ya existe
 DROP USER IF EXISTS 'admin'@'localhost';
 FLUSH PRIVILEGES;
@@ -41,8 +37,8 @@ FLUSH PRIVILEGES;
 -- Crear el usuario 'admin' con la contraseña 'admin'
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
 
--- Otorgar todos los permisos sobre la base de datos "practica2" al usuario 'admin'
-GRANT ALL PRIVILEGES ON practica2.* TO 'admin'@'localhost';
+-- Otorgar todos los permisos sobre la base de datos "proyecto" al usuario 'admin'
+GRANT ALL PRIVILEGES ON proyecto.* TO 'admin'@'localhost';
 
 -- Aplicar los cambios
 FLUSH PRIVILEGES;

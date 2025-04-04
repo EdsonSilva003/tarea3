@@ -7,8 +7,8 @@
     <title>Sistema de Recomendaciones</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6e7dff, #9be1fe); /* Fondo de gradiente suave */
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Fondo educativo azul claro */
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,30 +18,31 @@
         }
         
         .header {
-            background-color: #3f51b5;
+            background-color: #1e88e5; /* Azul vibrante educativo */
             color: white;
             width: 100%;
             padding: 1.5rem 0;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: bold;
         }
     
         .container {
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            padding: 2rem;
-            margin-top: 3rem;
-            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem;
+            margin-top: 2.5rem;
+            width: 90%;
             max-width: 650px;
             text-align: center;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
     
         .container:hover {
             transform: translateY(-10px); /* Efecto de levitación al pasar el mouse */
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
         }
     
         h1 {
@@ -65,58 +66,71 @@
         }
     
         .menu-button {
-            background-color: #6e7dff;
+            background-color: #1e88e5; /* Azul educativo */
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 1.2rem 2rem;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             text-decoration: none;
             display: inline-block;
         }
     
         .menu-button:hover {
-            background-color: #5c6bc0;
+            background-color: #1565c0; /* Azul más intenso */
             transform: scale(1.05); /* Efecto de agrandar el botón al hacer hover */
         }
     
         .admin-button {
-            background-color: #f44336;
+            background-color: #f44336; /* Rojo intenso */
         }
     
         .admin-button:hover {
-            background-color: #d32f2f;
+            background-color: #d32f2f; /* Rojo más oscuro */
         }
     
         .logout {
             margin-top: 3rem;
-            color: #6e7dff;
+            color: #1e88e5; /* Azul educativo */
             font-size: 1.1rem;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease, color 0.3s ease;
         }
     
         .logout:hover {
             text-decoration: underline;
-            color: #5c6bc0;
+            color: #1565c0; /* Azul más oscuro */
+        }
+
+        .illustration {
+            margin-bottom: 2rem;
+        }
+
+        .illustration img {
+            width: 100%;
+            max-width: 150px;
+            display: block;
+            margin: 0 auto;
         }
     </style>
-    
 </head>
 <body>
     <div class="header">
-        <h1>Sistema de Recomendaciones</h1>
+        Sistema de Recomendaciones
     </div>
     
     <div class="container">
+        <!-- <div class="illustration">
+            <img src="/src/main/resources/img/birrete" alt="Logotipo Educativo">
+        </div> -->
         <h1>Bienvenido</h1>
         <p class="welcome-message" sec:authentication="name">Usuario</p>
         
         <div class="menu-options">
-            <a href="/libros" class="menu-button">Libros</a>
-            <a href="/peliculas" class="menu-button">Películas</a>
+            <a href="/articulos" class="menu-button">Artículos</a>
             <a href="/perfil" class="menu-button">Mi Perfil</a>
             
             <!-- Mostrar el botón de administración solo a los usuarios con rol ADMIN -->
